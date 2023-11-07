@@ -1,0 +1,17 @@
+{
+	"extends": "../tsconfig.base.json",
+  "include": ["src/**/*", "webpack.config.ts", "../common/src/interfaces/IFisherYatesObj.ts"],
+	"compilerOptions": {
+		"lib": [
+			"DOM", "es2022"
+		],
+		"jsx": "react",	/* Specify JSX code generation: 'preserve', 'react-native', 'react', 'react-jsx' or 'react-jsxdev'. */
+	},
+	// Fixes errors when changing `module` to ES in the above compiler options
+	// See: https://github.com/webpack/webpack-cli/issues/2458#issuecomment-846635277
+	"ts-node": {
+		"compilerOptions": {
+			"module": "commonjs"
+		}
+	}
+}

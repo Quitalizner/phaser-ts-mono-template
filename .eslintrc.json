@@ -1,0 +1,107 @@
+{
+	"parser": "@typescript-eslint/parser", /* Specifies the ESLint parser */
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"globals": {
+		"Phaser": "readonly"
+	},
+	"parserOptions": {
+		"ecmaVersion": 12, /* Allows for the parsing of modern ECMAScript features */
+		"sourceType": "module" /* Allows for the use of imports */
+	},
+	"extends": [ /* Tells ESLint what configuration sets to extend from. The order in this array is the order the configuration sets will be applied so the last one wins for any conflicting configurations. */
+		"eslint:recommended", /* Uses the recommended rules */
+		"plugin:prettier/recommended",
+		"prettier"
+	],
+	"plugins": [ /* The plugins array is where you’ll define which plugins to use. */
+		"@typescript-eslint/eslint-plugin",
+		"import",
+		"prettier"
+	],
+	"ignorePatterns": [ /* node_modules/ is ignored by default */
+		"dist",
+		"**/*.js"
+	],
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{
+				"endOfLine": "auto"
+			}
+		],
+		"import/extensions": [
+			"warn",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+		],
+		"no-console": [
+			"warn",
+			{
+				"allow": [
+					"error",
+					"warn",
+					"dir"
+				]
+			}
+		],
+		"no-use-before-define": "off", /* Note you must disable the base rule as it can report incorrect errors, such as with enums */
+		"@typescript-eslint/no-use-before-define": [
+			"error"
+		],
+		"no-underscore-dangle": [
+			"error",
+			{
+				"allowAfterThis": true
+			}
+		],
+		"no-param-reassign": [
+			"error",
+			{
+				"props": false
+			}
+		],
+		"no-plusplus": "off",
+		"class-methods-use-this": "off",
+		"lines-between-class-members": [
+			"error",
+			"always",
+			{
+				"exceptAfterSingleLine": true
+			}
+		],
+		"@typescript-eslint/ban-ts-comment": [
+			"error",
+			{
+				"ts-ignore": "allow-with-description",
+				"minimumDescriptionLength": 10
+			}
+		],
+		"no-shadow": "off", /* Reports wrong errors */
+		"@typescript-eslint/no-shadow": [
+			"error"
+		],
+		"import/prefer-default-export": "off",
+		"import/no-default-export": "error",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"no-empty-function": "off",
+		"@typescript-eslint/no-empty-function": [
+			"off"
+		],
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": [
+			"off", // or "error"
+			{ 
+				"argsIgnorePattern": "^_",
+				"varsIgnorePattern": "^_",
+				"caughtErrorsIgnorePattern": "^_"
+			}
+		]
+	}
+}

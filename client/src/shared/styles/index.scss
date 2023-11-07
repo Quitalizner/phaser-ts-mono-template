@@ -1,0 +1,65 @@
+:root {
+	// --bg-color: #86e3ce;
+	--bg-color: #000000;
+}
+
+#app-root {
+	height: 100%;
+	position: absolute;
+
+}
+
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	background: var(--bg-color);
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+@font-face {
+	font-family: 'GameFont';
+	src: url("../../game/src/assets/fonts/Orbitron-Regular.ttf") format("trueType");
+}
+
+#font-hack {
+	position: absolute;
+	font-family: 'GameFont';
+	left: -200%;
+}
+
+@font-face {
+	font-family: 'GameFontMedium';
+	src: url("../../game/src/assets/fonts/Orbitron-Medium.ttf") format("trueType");
+}
+
+#font-hack-1 {
+	position: absolute;
+	font-family: 'GameFontMedium';
+	left: -200%;
+}
+
+@font-face {
+	font-family: 'GameFontBold';
+	src: url("../../game/src/assets/fonts/Orbitron-ExtraBold.ttf") format("trueType");
+}
+
+#font-hack-2 {
+	position: absolute;
+	font-family: 'GameFontBold';
+	left: -200%;
+}
+
+@font-face {
+	font-family: 'GameFontBlack';
+	src: url("../../game/src/assets/fonts/Orbitron-Black.ttf") format("trueType");
+}
+
+#font-hack-3 {
+	position: absolute;
+	font-family: 'GameFontBlack';
+	left: -200%;
+}

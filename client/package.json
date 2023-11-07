@@ -1,0 +1,43 @@
+{
+  "author": "Pratheek Ganesh",
+  "dependencies": {
+    "common": "file:../common",
+    "firebase": "^9.16.0",
+    "nanoid": "^4.0.0",
+    "phaser": "^3.60.0",
+    "phaser3-rex-plugins": "^1.1.77"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.2",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "postcss": "8.4.19",
+    "postcss-loader": "^7.0.2",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.0",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "license": "ISC",
+  "name": "mono-client",
+  "scripts": {
+    "build:prod": "cross-env NODE_ENV=production IS_STAGE=false PORT=8080 webpack --stats-error-details",
+    "build:stage": "cross-env NODE_ENV=development IS_STAGE=true PORT=8080 webpack --stats-error-details",
+		"integration": "npm-rum-all transpile:tsx",
+    "transpile:tsx": "npx tsc --jsx preserve -t es2020 --declaration true --outDir integration --noEmit false",
+    "transpile:scss": "sass src/*.scss integration/*.css",
+    "dev": "cross-env NODE_ENV=development IS_STAGE=false PORT=8080 webpack serve"
+  },
+  "type": "commonjs",
+  "browserslist": [
+    "defaults"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+	"editor.tabSize": 2,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true,
+	},
+	"editor.formatOnSave": false,
+	"[scss]": {
+		"editor.formatOnSave": true
+	},
+	"files.eol": "\r\n",
+	"editor.detectIndentation": false,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"javascript.preferences.quoteStyle": "single",
+	"typescript.preferences.quoteStyle": "single",
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
+	"editor.insertSpaces": false,
+	"editor.renderWhitespace": "all",
+}
