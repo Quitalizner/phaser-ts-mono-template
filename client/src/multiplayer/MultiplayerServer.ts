@@ -6,5 +6,4 @@ export class MultiplayerServer {
 	constructor() {
 		this.gameEvents = new Phaser.Events.EventEmitter();
 	}
-
 }
